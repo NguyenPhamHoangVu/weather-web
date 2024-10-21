@@ -17,6 +17,11 @@ const Inputs = ({ setQuery, setUnits }) => {
       });
     }
   };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      hanldeSearch(e);
+    }
+  };
 
   return (
     <div className="flex flex-row justify-center my-6">
@@ -24,6 +29,7 @@ const Inputs = ({ setQuery, setUnits }) => {
         <input
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
+          onKeyDown={handleKeyDown}
           type="text"
           placeholder="Search Thành Phố"
           className="text-gray-500 text-xl font-light p-3 w-full rounded-md shadow-xl capitalize focus:outline-none placeholder:lowercase"

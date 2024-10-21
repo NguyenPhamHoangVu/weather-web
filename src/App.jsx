@@ -14,7 +14,7 @@ const App = () => {
   const getWeather = async () => {
     try {
       const data = await getFormattedWeatherData({ ...query, units });
-      console.log(data); // Kiểm tra xem dữ liệu đã được nhận đúng không
+      console.log(data);
       setWeather(data);
     } catch (error) {
       console.log(error);
@@ -39,7 +39,6 @@ const App = () => {
     >
       <TopButton setQuery={setQuery} />
       <Inputs setQuery={setQuery} setUnits={setUnits} />
-
       {weather && (
         <>
           <TimeAndLocation weather={weather} />
