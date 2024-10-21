@@ -20,6 +20,7 @@ const Inputs = ({ setQuery, setUnits }) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       hanldeSearch(e);
+      setCity("");
     }
   };
 
