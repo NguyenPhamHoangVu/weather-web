@@ -13,7 +13,8 @@ const Forecast = ({ title, data }) => {
             key={index}
             className="flex flex-col items-center justify-center"
           >
-            <p className="font-light text-sm">Wed</p>
+            {/* Hiển thị thời gian cho 5 giờ tiếp theo */}
+            <p className="font-light text-sm">{d.title}</p>
             <img src={d.icon} alt="weather icon" className="w-10" />
             <p className="font-medium text-sm">{`${d.temp.toFixed()}°C`}</p>
           </div>
